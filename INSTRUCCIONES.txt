@@ -1,0 +1,15 @@
+PUBLICAR LAS 39 INVITACIONES DE NATALIA CON GITHUB PAGES
+
+1. Entra a https://github.com y crea una cuenta gratis, si aún no tienes.
+2. Crea un repositorio PÚBLICO llamado natalia-xv.
+3. En el repositorio selecciona Add file > Upload files.
+4. Sube TODOS los archivos HTML de este ZIP y el archivo index.html (no subas el ZIP sin extraer).
+5. Pulsa Commit changes.
+6. Abre Settings > Pages > Build and deployment > Deploy from a branch.
+7. Selecciona main y /(root), luego Save. Espera unos minutos.
+8. Tu página será https://TU_USUARIO.github.io/natalia-xv/
+9. Cada invitación estará en https://TU_USUARIO.github.io/natalia-xv/invitacion-01.html, ... invitacion-39.html.
+10. En LISTA_ENLACES.csv cambia TU_USUARIO por tu nombre real de usuario de GitHub.
+11. Copia el enlace correspondiente a cada invitado y envíalo por WhatsApp.
+
+IMPORTANTE: GitHub Pages público significa que cualquiera con un enlace puede acceder a la invitación. Los enlaces NO son privados ni requieren contraseña. No publiques teléfonos ni datos sensibles. El invitado debe pulsar el botón de WhatsApp y enviar el mensaje para confirmar. No se registran automáticamente las confirmaciones en Google Sheets.

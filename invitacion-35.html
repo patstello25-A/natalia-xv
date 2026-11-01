@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Natalia XV · Editor + Invitación</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080711;--navy:#11132c;--wine:#651426;--gold:#d9b46a;--gold2:#f3dda0;--paper:#f5e8ca;--ink:#25170f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff8e8;font-family:"Cormorant Garamond",serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 20%,#9c263520,transparent 24%),radial-gradient(circle at 85% 70%,#d9b46a14,transparent 28%);z-index:-1}
+.top{position:fixed;z-index:20;right:18px;top:15px;display:flex;gap:8px}.top button,.editorBtn{border:1px solid var(--gold);background:#100e1bcc;color:var(--gold2);border-radius:999px;padding:10px 15px;cursor:pointer;font-family:Cinzel;font-size:10px;letter-spacing:1px}
+.nav{position:fixed;z-index:10;top:0;left:0;right:0;padding:17px 180px 17px 18px;display:flex;gap:24px;justify-content:center;background:linear-gradient(#080711,transparent);font:10px Cinzel;letter-spacing:1.5px;text-transform:uppercase}
+.nav a{color:#fff4d3;text-decoration:none}.brand{position:absolute;left:18px;color:var(--gold2)}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 35%,#7e24394a,transparent 26%),linear-gradient(#080711,#11132c 52%,#080711)}
+.curtain{position:absolute;top:0;width:25%;height:100%;background:linear-gradient(90deg,#250712,#701426 50%,#21060f);opacity:.75}.left{left:-10%;clip-path:polygon(0 0,100% 0,74% 100%,0 100%)}.right{right:-10%;clip-path:polygon(0 0,100% 0,100% 100%,26% 100%)}
+.heroInner{position:relative;z-index:2;padding:90px 20px 50px}.rose{font-size:70px;filter:drop-shadow(0 0 22px #d7354b66)}.kicker{font:11px Cinzel;letter-spacing:4px;color:var(--gold2)}h1{font:400 clamp(60px,10vw,112px)/.85 "Great Vibes";color:#f6e5b8;margin:18px 0}h2{font:500 clamp(22px,4vw,42px) Cinzel;letter-spacing:4px;margin:0;color:#fff4d2}.hero p{font-size:22px;font-style:italic;color:#d7c9a9}.gold{display:inline-block;border:1px solid var(--gold);background:linear-gradient(135deg,#8b561d,#ebca79,#87531c);color:#1a1008;padding:13px 23px;border-radius:999px;font:11px Cinzel;letter-spacing:1.5px;text-decoration:none;cursor:pointer}
+section{padding:100px 18px}.paper{background:linear-gradient(135deg,#e5cf9f,#fff1d3,#dfc493);color:var(--ink)}.wrap{max-width:1000px;margin:auto}.eyebrow{text-align:center;font:10px Cinzel;letter-spacing:4px;color:var(--gold);text-transform:uppercase}.paper .eyebrow{color:#81521e}.title{text-align:center;font:400 60px "Great Vibes";color:var(--gold2);margin:10px 0 22px}.paper .title{color:#6c1b2b}.orn{text-align:center;color:var(--gold);margin-bottom:30px;letter-spacing:8px}
+.card{max-width:670px;margin:auto;text-align:center;padding:45px 30px;background:#fff9ebcc;border:1px solid #80541f55;box-shadow:0 25px 60px #0002}.card p{font-size:22px;line-height:1.35}.name{font:400 50px "Great Vibes";color:#6c1b2b}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.detail{border:1px solid #d9b46a55;padding:26px 14px;text-align:center;background:#ffffff08;border-radius:9px}.detail b{display:block;font:11px Cinzel;letter-spacing:2px;color:var(--gold2);margin:8px}.detail span{font-size:20px}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:25px auto}.time{border:1px solid #d9b46a55;padding:20px;text-align:center}.time b{font:40px Cinzel;color:var(--gold2);display:block}.time span{font-size:11px;letter-spacing:2px;color:#cbbd9d}
+.rsvpGrid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.form{background:#fff8e9;color:var(--ink);padding:30px;border-radius:10px}.form h3{font:48px "Great Vibes";color:#6c1b2b;margin:0}.form label{display:block;font:10px Cinzel;letter-spacing:1px;margin:14px 0 5px}.form input,.form select{width:100%;padding:11px;border:1px solid #c9b17d;border-radius:5px;font:18px "Cormorant Garamond"}.map{padding:35px;border:1px solid #d9b46a55;text-align:center;border-radius:10px;background:linear-gradient(145deg,#0d0e25,#191c3b)}.map .castle{font-size:70px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.photo{aspect-ratio:1/1.1;background:linear-gradient(145deg,#6e1d2f,#11132c);border:1px solid #d9b46a55;overflow:hidden;position:relative}.photo img{width:100%;height:100%;object-fit:cover;display:none}.photo.has img{display:block}.photo .placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#f1dfb5;font:12px Cinzel;letter-spacing:1px;padding:10px}.photo.has .placeholder{display:none}
+.gift{text-align:center}.gift p{font-size:24px}.footer{text-align:center;padding:90px 18px 45px;background:#05050b}.footer .final{font:64px "Great Vibes";color:#f0d798}.editor{position:fixed;inset:0;z-index:100;background:#f5f0e6;color:#1d1712;overflow:auto;display:none}.editor.open{display:block}.editorHead{position:sticky;top:0;z-index:2;background:#151325;color:#fff;padding:14px 18px;display:flex;justify-content:space-between;align-items:center}.editorHead h2{font:22px Cinzel;color:#f3dda0;letter-spacing:2px}.editorInner{max-width:900px;margin:auto;padding:25px}.editGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{background:white;padding:15px;border:1px solid #ddd3c0;border-radius:10px}.field.full{grid-column:1/-1}.field label{display:block;font:bold 11px Arial;letter-spacing:1px;text-transform:uppercase;margin-bottom:7px}.field input,.field textarea{width:100%;padding:10px;border:1px solid #cfc5b4;border-radius:6px;font:16px Arial}.field textarea{min-height:80px;resize:vertical}.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.photoEdit{border:1px solid #d4c8b4;padding:12px;border-radius:9px;background:#fff}.photoEdit input{width:100%}.save{margin:20px 0;padding:14px 22px;border:0;border-radius:999px;background:#6b1a27;color:#fff;cursor:pointer;font:bold 12px Arial;letter-spacing:1px}.hint{font:13px Arial;color:#6b6257;line-height:1.5}.success{display:none;background:#e3f4df;border:1px solid #9bc38f;padding:12px;border-radius:8px;font:13px Arial}.success.show{display:block}
+@media(max-width:700px){.nav{justify-content:flex-end;gap:10px;padding-right:18px}.nav a:nth-child(n+3){display:none}.brand{position:static;margin-right:auto}.grid,.rsvpGrid,.editGrid{grid-template-columns:1fr}.count{gap:5px}.time{padding:15px 4px}.time b{font-size:25px}.gallery,.photos{grid-template-columns:repeat(2,1fr)}.photo:last-child{grid-column:span 2}.title{font-size:50px}.name{font-size:43px}}
+
+/* Mejor contraste para el mapa y rosa encantada vectorial */
+.map{background:linear-gradient(145deg,#10102b,#242044 65%,#17122b);border:1px solid #d9b46a99;box-shadow:inset 0 0 35px #d9b46a12}
+.map .eyebrow.castle-heading{color:#ffe4a0;font-size:clamp(15px,2.7vw,19px);font-weight:700;letter-spacing:2.4px;line-height:1.5;text-shadow:0 2px 5px #000,0 0 16px #e2a94a77;margin:12px auto 14px}
+.map #mapPlace{color:#fff4d5;font-size:clamp(23px,3.5vw,30px);margin:8px 0}
+.map p{color:#f4e5ce;font-size:21px}
+.enchanted-rose{display:block;width:min(215px,75%);height:auto;margin:0 auto 7px;filter:drop-shadow(0 5px 16px #0008)}
+.guestCard{border:1px solid #ae7c38;background:#fff1d0;padding:20px 14px;border-radius:10px;text-align:center;margin:18px 0;color:#351723}.guestCard strong{display:block;font:600 clamp(22px,3vw,30px) "Cormorant Garamond",serif;margin:8px 0}.guestCard span{display:block;font:600 11px Cinzel,serif;letter-spacing:1px;color:#6b2733}.form .hint{color:#57483b;font-size:15px;line-height:1.35}
+</style>
+</head>
+<body>
+<nav class="nav"><a class="brand" href="#inicio">NATALIA XV 🌹</a><a href="#inicio">Inicio</a><a href="#detalles">Detalles</a><a href="#galeria">Galería</a><a href="#rsvp">RSVP</a><a href="#ubicacion">Ubicación</a></nav>
+<div class="top"><button id="music">♫ Música</button></div>
+
+<header class="hero" id="inicio"><div class="curtain left"></div><div class="curtain right"></div><div class="heroInner"><div class="kicker">UNA NOCHE · UN CUENTO · UN RECUERDO</div><div class="rose">🌹</div><h1>Había una vez...</h1><h2>una noche mágica</h2><p>una niña que soñaba con vivir su propio cuento.</p><button class="gold" id="open">✨ Abrir la invitación</button></div></header>
+
+<section class="paper" id="dedicatoria" style="padding:65px 18px"><div class="wrap"><div class="eyebrow">Una invitación exclusiva</div><div class="title">Especialmente para ti</div><div class="card" style="border:2px solid #9b6a2c;box-shadow:0 16px 45px #4d182330"><p style="font:600 12px Cinzel;letter-spacing:2px;color:#742a37">INVITACIÓN Nº 35</p><div class="name" style="font-size:clamp(37px,6vw,55px);line-height:1.15">Hermanos Candanedo</div><p>Con mucho cariño hemos reservado para ustedes</p><div style="font:600 34px Cinzel;color:#742a37">2 <span style="font-size:18px">puestos reservados</span></div><p>para celebrar los XV años de Natalia.</p><a class="gold" href="#rsvp">💌 Confirmar asistencia</a></div></div></section>
+<section class="paper" id="invitacion"><div class="wrap"><div class="eyebrow">La invitación</div><div class="title">Un cuento hecho realidad</div><div class="orn">✦ ❦ ✦</div><div class="card"><p>“Hay momentos en la vida que merecen convertirse en recuerdos para siempre.”</p><p>Con mucha ilusión,</p><div class="name" id="viewName">Natalia Nazareth<br>Santa​na Romero</div><p>te invita a celebrar junto a ella una noche muy especial...</p><p><strong>Sus XV años</strong></p></div></div></section>
+
+<section id="detalles"><div class="wrap"><div class="eyebrow">La celebración</div><div class="title">Guarda la fecha</div><div class="orn">✦ ❦ ✦</div><div class="grid"><div class="detail">📅<b>FECHA</b><span id="viewDate">07 de noviembre de 2026</span></div><div class="detail">🕯️<b>HORA</b><span id="viewTime">8:00 p.m.</span></div><div class="detail">🏰<b>LUGAR</b><span id="viewPlace">Junta Comunal Santa María</span></div></div><div class="card" style="margin-top:25px;background:#ffffff0d;color:#fff;border-color:#d9b46a55"><div style="font-size:42px">👗</div><div class="eyebrow">Código de vestimenta</div><p id="viewDress">Elegancia de cuento de hadas ✨<br><strong style="color:#f0d798">Importante: el color amarillo está reservado para la Quinceañera.</strong></p></div></div></section>
+
+<section><div class="wrap" style="text-align:center"><div class="eyebrow">El gran día se acerca</div><div class="title">Cuenta regresiva</div><div class="count"><div class="time"><b id="d">--</b><span>DÍAS</span></div><div class="time"><b id="h">--</b><span>HORAS</span></div><div class="time"><b id="m">--</b><span>MINUTOS</span></div><div class="time"><b id="s">--</b><span>SEGUNDOS</span></div></div></div></section>
+
+<section class="paper" id="rsvp"><div class="wrap"><div class="eyebrow">Tu presencia</div><div class="title">Confirma tu asistencia</div><div class="rsvpGrid"><form class="form" id="form"><h3>¿Nos acompañas?</h3><p>Esta invitación es especialmente para:</p><div class="guestCard"><span>INVITACIÓN Nº 35</span><strong>Hermanos Candanedo</strong><span>2 puestos reservados</span></div><label for="attend">¿Confirmas tu asistencia?</label><select id="attend"><option value="Sí">Sí, asistiré</option><option value="No">No podré asistir</option></select><label for="companions">¿Cuántas personas asistirán (incluyéndote)?</label><select id="companions"><option value="0" >0</option><option value="1" >1</option><option value="2" selected>2</option></select><p class="hint">Puedes confirmar menos personas que las reservadas. Al pulsar el botón se abrirá WhatsApp con tu respuesta lista para enviar al 6310-9421.</p><button class="gold" style="width:100%;margin-top:18px" type="submit">💌 Confirmar por WhatsApp</button></form><div class="map" id="ubicacion"><svg class="enchanted-rose" viewBox="0 0 240 290" role="img" aria-label="Rosa roja encantada dentro de una cúpula de cristal" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".30"/><stop offset=".45" stop-color="#d7eaff" stop-opacity=".035"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient><linearGradient id="petal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff7180"/><stop offset=".45" stop-color="#c71939"/><stop offset="1" stop-color="#650b24"/></linearGradient><linearGradient id="stem" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#79a85b"/><stop offset="1" stop-color="#1f5533"/></linearGradient><radialGradient id="glow"><stop stop-color="#f7c97b" stop-opacity=".3"/><stop offset="1" stop-color="#f7c97b" stop-opacity="0"/></radialGradient></defs><ellipse cx="120" cy="258" rx="92" ry="17" fill="#000" opacity=".3"/><ellipse cx="120" cy="138" rx="110" ry="133" fill="url(#glow)"/><path d="M44 237V113C44 68 78 30 120 30s76 38 76 83v124Z" fill="url(#glass)" stroke="#e8e5e5" stroke-opacity=".8" stroke-width="2.5"/><path d="M56 115C56 76 84 46 112 42" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="6" stroke-linecap="round"/><path d="M184 116v99" stroke="#fff" stroke-opacity=".25" stroke-width="4" stroke-linecap="round"/><path d="M119 148C117 175 122 201 120 237" fill="none" stroke="url(#stem)" stroke-width="6" stroke-linecap="round"/><path d="M119 192Q87 163 74 183Q90 210 119 201" fill="#327044" stroke="#83b36b" stroke-width="1.5"/><path d="M121 211Q152 181 168 194Q152 223 121 221" fill="#28623d" stroke="#80ae65" stroke-width="1.5"/><path d="M119 156Q91 140 96 112Q102 91 119 106Q138 86 149 110Q156 138 119 156" fill="url(#petal)" stroke="#ff8b8d" stroke-width="1.7"/><path d="M119 145Q83 133 91 104Q108 109 119 126Q133 97 151 103Q158 133 119 145" fill="url(#petal)" stroke="#ef6173" stroke-width="1.5"/><path d="M119 128Q101 110 110 93Q120 86 130 95Q139 112 119 128" fill="#a50f2d" stroke="#ff7a83" stroke-width="1.5"/><path d="M119 119Q110 105 119 101Q130 105 119 119" fill="#f04a62"/><path d="M34 236Q120 226 206 236L211 248Q120 262 29 248Z" fill="#bd8a45" stroke="#f5dba0" stroke-width="2"/><rect x="34" y="248" width="172" height="14" rx="5" fill="#5b2d23" stroke="#d5a65c" stroke-width="2"/><ellipse cx="120" cy="264" rx="89" ry="7" fill="#9b6734" stroke="#f0cb86" stroke-width="2"/><g fill="#ffe5a5"><circle cx="65" cy="92" r="2"/><circle cx="173" cy="79" r="2.5"/><circle cx="77" cy="163" r="1.8"/><circle cx="167" cy="165" r="2"/><path d="M163 54v10m-5-5h10M73 135v8m-4-4h8" stroke="#ffe5a5" stroke-width="1.5"/></g></svg><div class="eyebrow castle-heading">Encuentra el castillo</div><h3 id="mapPlace">Junta Comunal Santa María</h3><p>Tu lugar en este cuento te espera.</p><a class="gold" id="mapLink" target="_blank" rel="noopener">📍 Ver ubicación</a></div></div></div></section>
+
+<section id="regalo"><div class="wrap gift"><div class="eyebrow">Un detalle de amor</div><div class="title">Tu presencia es el regalo</div><div style="font-size:65px">💌</div><p>Si deseas acompañarnos con un detalle, tendremos<br><strong style="color:#f0d798" id="viewGift">“Lluvia de Sobres”</strong>.</p></div></section>
+
+<section id="galeria"><div class="wrap"><div class="eyebrow">Recuerdos</div><div class="title">Antes de convertirse en princesa...</div><p style="text-align:center;font-size:21px;color:#cfc1a3">Una pequeña historia en fotografías.</p><div class="gallery">
+<div class="photo" data-i="0"><img><div class="placeholder">Foto 1<br>Primer capítulo</div></div><div class="photo" data-i="1"><img><div class="placeholder">Foto 2<br>Pequeña soñadora</div></div><div class="photo" data-i="2"><img><div class="placeholder">Foto 3<br>Momentos</div></div><div class="photo" data-i="3"><img><div class="placeholder">Foto 4<br>Familia</div></div><div class="photo" data-i="4"><img><div class="placeholder">Foto 5<br>Sonrisas</div></div><div class="photo" data-i="5"><img><div class="placeholder">Foto 6<br>Mis XV</div></div>
+</div></div></section>
+
+<section><div class="wrap" style="text-align:center"><div class="eyebrow">La música</div><div class="title">Haz este cuento aún más especial</div><button class="gold" id="music2">♫ Activar música</button><p id="musicMsg" style="font-size:18px;color:#cfc1a3">La Bella y La Bestia · Irasema Terrazas</p></div></section>
+
+<footer class="footer"><div class="rose">🌹</div><div class="final">Y aquella noche...</div><p style="font-size:21px;color:#cfc1a3">el cuento dejó de ser un sueño<br>para convertirse en realidad.</p><p style="font-family:Cinzel;color:#f0d798;letter-spacing:2px">NATALIA NAZARETH · XV AÑOS</p></footer>
+
+<div class="editor" id="editor">
+<div class="editorHead"><h2>✦ EDITAR INVITACIÓN</h2><button class="editorBtn" id="closeEdit">Ver invitación</button></div>
+<div class="editorInner">
+<p class="hint">Cambia los datos, sube fotos y guarda. Los cambios quedan guardados en este navegador. Puedes abrir el editor otra vez con el botón ✎.</p>
+<div class="editGrid">
+<div class="field full"><label>Nombre de la quinceañera</label><input id="eName"></div>
+<div class="field"><label>Fecha (DD/MM/AAAA)</label><input id="eDate"></div>
+<div class="field"><label>Hora</label><input id="eTime"></div>
+<div class="field full"><label>Lugar</label><input id="ePlace"></div>
+<div class="field full"><label>Código de vestimenta / nota</label><textarea id="eDress"></textarea></div>
+<div class="field"><label>Regalo</label><input id="eGift"></div>
+<div class="field"><label>Texto de apertura</label><input id="eIntro"></div>
+<div class="field full"><label>Enlace exacto de Google Maps (opcional)</label><input id="eMap" placeholder="Pega aquí el enlace de Google Maps"></div>
+<div class="field full"><label>Música MP3 (opcional)</label><input id="eMusic" type="file" accept="audio/*"><p class="hint">La canción se guarda localmente en este navegador. Para una web pública conviene alojar el MP3 y usar su URL.</p></div>
+</div>
+<h3 style="font-family:Cinzel;margin-top:28px">📸 FOTOS DE NATALIA</h3>
+<div class="photos" id="photoEditors"></div>
+<button class="save" id="save">GUARDAR CAMBIOS</button>
+<div class="success" id="saved">✨ Cambios guardados. Pulsa “Ver invitación” para verlos.</div>
+</div></div>
+
+<audio id="audio" loop preload="none" src="musica-natalia.mp3"></audio>
+<script>
+const defaults={name:"Natalia Nazareth Santana Romero",date:"07/11/2026",time:"8:00 p.m.",place:"Junta Comunal Santa María",dress:"Elegancia de cuento de hadas ✨\nImportante: el color amarillo está reservado para la Quinceañera.",gift:"Lluvia de Sobres",intro:"una niña que soñaba con vivir su propio cuento.",map:"https://www.google.com/maps/search/?api=1&query=Junta+Comunal+Santa+Mar%C3%ADa+Panam%C3%A1",photos:[]};
+let data=JSON.parse(localStorage.getItem("nataliaXV_data")||"null")||defaults;
+const $=id=>document.getElementById(id);
+function render(){
+  $("viewName").innerHTML=data.name.replace(/\n/g,"<br>");
+  $("viewDate").textContent=data.date; $("viewTime").textContent=data.time; $("viewPlace").textContent=data.place;
+  $("viewDress").innerHTML=data.dress.replace(/\n/g,"<br>");
+  $("viewGift").textContent="“"+data.gift+"”"; $("mapPlace").textContent=data.place;
+  $("mapLink").href=data.map||("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(data.place));
+  document.querySelector(".hero p").textContent=data.intro;
+  document.querySelectorAll(".photo").forEach((el,i)=>{let src=data.photos[i];el.classList.toggle("has",!!src);el.querySelector("img").src=src||""});
+}
+function editorFields(){
+  $("eName").value=data.name;$("eDate").value=data.date;$("eTime").value=data.time;$("ePlace").value=data.place;
+  $("eDress").value=data.dress;$("eGift").value=data.gift;$("eIntro").value=data.intro;$("eMap").value=data.map||"";
+  let box=$("photoEditors");box.innerHTML="";
+  for(let i=0;i<6;i++){let div=document.createElement("div");div.className="photoEdit";div.innerHTML=`<b>Foto ${i+1}</b><br><br><input type="file" accept="image/*" data-photo="${i}"><br><br><button type="button" class="editorBtn" data-clear="${i}">Quitar foto</button>`;box.appendChild(div)}
+  box.querySelectorAll("input[type=file]").forEach(inp=>inp.addEventListener("change",e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{data.photos[+e.target.dataset.photo]=r.result;localStorage.setItem("nataliaXV_data",JSON.stringify(data));render()};r.readAsDataURL(f)}));
+  box.querySelectorAll("[data-clear]").forEach(b=>b.onclick=()=>{data.photos[+b.dataset.clear]="";localStorage.setItem("nataliaXV_data",JSON.stringify(data));render()});
+}
+
+$("closeEdit").onclick=()=>{$("editor").classList.remove("open");render()};
+$("save").onclick=()=>{data.name=$("eName").value.trim()||defaults.name;data.date=$("eDate").value.trim()||defaults.date;data.time=$("eTime").value.trim()||defaults.time;data.place=$("ePlace").value.trim()||defaults.place;data.dress=$("eDress").value.trim()||defaults.dress;data.gift=$("eGift").value.trim()||defaults.gift;data.intro=$("eIntro").value.trim()||defaults.intro;data.map=$("eMap").value.trim()||"";localStorage.setItem("nataliaXV_data",JSON.stringify(data));render();$("saved").classList.add("show");setTimeout(()=>$("saved").classList.remove("show"),3500)};
+$("open").onclick=()=>{document.querySelector("#invitacion").scrollIntoView();if(audio.paused)audio.play().catch(()=>{});};
+$("form").onsubmit=e=>{e.preventDefault();const attending=$("attend").value;const count=attending==="No"?0:Number($("companions").value);if(attending==="Sí"&&count===0){alert("Selecciona cuántas personas asistirán o marca que no podrás asistir.");return;}const msg=`🌹 Confirmación XV años de Natalia
+Invitación: 35
+Invitado: Hermanos Candanedo
+Puestos reservados: 2
+Respuesta: ${attending==="Sí"?"Sí, asistiremos":"No podremos asistir"}
+Personas que asistirán: ${count}`;window.open("https://wa.me/50763109421?text="+encodeURIComponent(msg),"_blank","noopener");};$("attend").addEventListener("change",()=>{$("companions").disabled=$("attend").value==="No";});
+function countdown(){let [dd,mm,yy]=data.date.split("/");let target=new Date(`${yy}-${mm}-${dd}T20:00:00-05:00`).getTime();let x=Math.max(0,target-Date.now());$("d").textContent=Math.floor(x/86400000);x%=86400000;$("h").textContent=Math.floor(x/3600000);x%=3600000;$("m").textContent=Math.floor(x/60000);$("s").textContent=Math.floor((x%60000)/1000)}countdown();setInterval(countdown,1000);
+let audio=$("audio");function play(){if(!audio.src){$("musicMsg").textContent="Carga un MP3 desde el editor para usar tu canción.";return}audio.paused?audio.play().catch(()=>{$("musicMsg").textContent="Pulsa Activar música para escuchar la canción."}):audio.pause()}$("music").onclick=play;$("music2").onclick=play;
+$("eMusic").addEventListener("change",e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{data.music=r.result;audio.src=data.music;localStorage.setItem("nataliaXV_data",JSON.stringify(data));$("musicMsg").textContent="Canción cargada en este navegador.";};r.readAsDataURL(f)});
+if(data.music){audio.src=data.music}
+render();
+</script>
+</body></html>
