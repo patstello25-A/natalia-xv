@@ -13,3 +13,7 @@ PUBLICAR LAS 39 INVITACIONES DE NATALIA CON GITHUB PAGES
 11. Copia el enlace correspondiente a cada invitado y envíalo por WhatsApp.
 
 IMPORTANTE: GitHub Pages público significa que cualquiera con un enlace puede acceder a la invitación. Los enlaces NO son privados ni requieren contraseña. No publiques teléfonos ni datos sensibles. El invitado debe pulsar el botón de WhatsApp y enviar el mensaje para confirmar. No se registran automáticamente las confirmaciones en Google Sheets.
+
+ACTUALIZACION 01/11/2026: Fecha 28/11/2026, hora 8:00 p.m., lugar Cancha Municipal de Santa María.
+Sube los 39 archivos invitacion-XX.html al directorio raíz del repositorio natalia-xv y reemplaza los anteriores. No cambies los nombres.
+Los enlaces existentes se mantienen. Prueba en ventana privada o recarga forzada si GitHub Pages tarda en mostrar los cambios.
